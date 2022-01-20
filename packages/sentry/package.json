@@ -1,0 +1,10 @@
+{
+  "name": "@pages-plugins/sentry",
+  "main": "_worker.js",
+  "scripts": {
+    "build": "npx wrangler pages functions build --plugin-name='@pages-plugins/sentry' src"
+  },
+  "dependencies": {
+    "toucan-js": "^2.5.0"
+  }
+}

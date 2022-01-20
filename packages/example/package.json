@@ -1,0 +1,13 @@
+{
+  "name": "@pages-plugins/example",
+  "version": "1.0.0",
+  "dependencies": {
+    "graphql": "^16.2.0"
+  },
+  "scripts": {
+    "prestart": "cd ../core; npm start",
+    "start": "npx wrangler pages dev static",
+    "build:pages": "npx wrangler pages functions build --script-path static/_worker.js",
+    "build:worker": "npx wrangler pages functions build --fallback-service='' && cat _worker.js | pbcopy"
+  }
+}

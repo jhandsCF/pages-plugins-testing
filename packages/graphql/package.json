@@ -1,0 +1,10 @@
+{
+  "name": "@pages-plugins/graphql",
+  "main": "_worker.js",
+  "scripts": {
+    "build": "npx wrangler pages functions build --plugin-name='@pages-plugins/graphql' --plugin-assets-directory=static src"
+  },
+  "peerDependencies": {
+    "graphql": "^16.2.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@pages-plugins/headers",
+  "main": "_worker.js",
+  "files": [
+    "_worker.js"
+  ],
+  "scripts": {
+    "build": "npx wrangler pages functions build --plugin"
+  }
+}

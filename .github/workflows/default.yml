@@ -2,12 +2,8 @@ name: Manually triggered workflow
 on:
   workflow_dispatch:
     inputs:
-      name:
-        description: "Person to greet"
-        required: true
-        default: "Mona the Octocat"
-      home:
-        description: "location"
+      tag:
+        description: "Tag"
         required: false
 
 jobs:
@@ -15,14 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo Hello $NAME home $HOME!
-        if: ${{ github.event.inputs.home }}
-        env:
-          NAME: ${{ github.event.inputs.name }}
-          HOME: ${{ github.event.inputs.home }}
-      - run: |
-          echo Hello $NAME no home!
-        if: ${{ !github.event.inputs.home }}
-        env:
-          NAME: ${{ github.event.inputs.name }}
-          HOME: ${{ github.event.inputs.home }}
+          echo Hello!

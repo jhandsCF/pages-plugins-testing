@@ -1,5 +1,6 @@
 {
   "name": "pages-plugins",
+  "private": true,
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "build:example:worker": "npm run build:worker --workspace=./packages/example",

@@ -7,7 +7,7 @@ This GraphQL plugin creates a GraphQL server which can respond to `application/j
 ## Installation
 
 ```sh
-npm install --save @pages-plugins/graphql
+npm install --save @cfpreview/pages-plugins-graphql
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save @pages-plugins/graphql
 ```typescript
 // ./functions/graphql.ts
 
-import graphQLPlugin from "@pages-plugins/graphql";
+import graphQLPlugin from "@cfpreview/pages-plugins-graphql";
 import { GraphQLSchema, GraphQLObjectType, GraphQLString } from "graphql";
 
 const schema = new GraphQLSchema({

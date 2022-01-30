@@ -1,12 +1,14 @@
 {
-  "name": "@pages-plugins/graphql",
+  "name": "@cfpreview/pages-plugins-graphql",
+  "version": "0.0.1",
   "main": "_worker.js",
   "directories": {
     "assets": "static"
   },
   "files": [
     "_worker.js",
-    "static"
+    "index.d.ts",
+    "static/"
   ],
   "scripts": {
     "build": "npx wrangler pages functions build --plugin"

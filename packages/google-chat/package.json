@@ -1,8 +1,10 @@
 {
-  "name": "@pages-plugins/google-chat",
+  "name": "@cfpreview/pages-plugins-google-chat",
+  "version": "0.0.1",
   "main": "_worker.js",
   "files": [
     "_worker.js",
+    "index.d.ts",
     "api/"
   ],
   "scripts": {

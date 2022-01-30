@@ -7,7 +7,7 @@ This plugin creates a Google Chat bot which can respond to messages. It also inc
 ## Installation
 
 ```sh
-npm install --save @pages-plugins/google-chat
+npm install --save @cfpreview/pages-plugins-google-chat
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save @pages-plugins/google-chat
 ```typescript
 // ./functions/google-chat.ts
 
-import googleChatPlugin from "@pages-plugins/google-chat";
+import googleChatPlugin from "@cfpreview/pages-plugins-google-chat";
 
 export const onRequest: PagesFunction = googleChatPlugin(async (message) => {
   if (message.text.includes("ping")) {

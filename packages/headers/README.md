@@ -7,7 +7,7 @@ This headers plugin adds headers to all responses which occur below it in the ex
 ## Installation
 
 ```sh
-npm install --save @pages-plugins/headers
+npm install --save @cfpreview/pages-plugins-headers
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save @pages-plugins/headers
 ```typescript
 // ./functions/api/_middleware.ts
 
-import headersPlugin from "@pages-plugins/headers";
+import headersPlugin from "@cfpreview/pages-plugins-headers";
 
 export const onRequest: PagesFunction = headersPlugin({
   "Access-Control-Allow-Origin": "*",

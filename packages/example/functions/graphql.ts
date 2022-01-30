@@ -1,4 +1,4 @@
-import graphQLPlugin from "@pages-plugins/graphql";
+import graphQLPlugin from "@cfpreview/pages-plugins-graphql";
 import { GraphQLSchema, GraphQLObjectType, GraphQLString } from "graphql";
 
 const schema = new GraphQLSchema({

@@ -7,7 +7,7 @@ This Sentry plugin captures and logs all exceptions which occur below it in the 
 ## Installation
 
 ```sh
-npm install --save @pages-plugins/sentry
+npm install --save @cfpreview/pages-plugins-sentry
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save @pages-plugins/sentry
 ```typescript
 // ./functions/_middleware.ts
 
-import sentryPlugin from "@pages-plugins/sentry";
+import sentryPlugin from "@cfpreview/pages-plugins-sentry";
 
 export const onRequest: PagesFunction = sentryPlugin({
   dsn: "https://sentry.io/xyz",
@@ -29,7 +29,7 @@ If your [DSN](https://docs.sentry.io/product/sentry-basics/dsn-explainer/) is he
 ```typescript
 // ./functions/_middleware.ts
 
-import sentryPlugin from "@pages-plugins/sentry";
+import sentryPlugin from "@cfpreview/pages-plugins-sentry";
 
 export const onRequest: PagesFunction<{
   SENTRY_DSN: string;
@@ -41,7 +41,7 @@ export const onRequest: PagesFunction<{
 ```typescript
 // ./functions/_middleware.ts
 
-import sentryPlugin from "@pages-plugins/sentry";
+import sentryPlugin from "@cfpreview/pages-plugins-sentry";
 
 export const onRequest: PagesFunction<{
   KV: KVNamespace;
@@ -59,7 +59,7 @@ For example, you can access `data.sentry` and set user information like so:
 ```typescript
 // ./functions/admin/_middleware.ts
 
-import type sentryPlugin from "@pages-plugins/sentry";
+import type sentryPlugin from "@cfpreview/pages-plugins-sentry";
 
 type PagesFunctionWithSentry = ReturnType<typeof sentryPlugin>;
 

@@ -1,8 +1,10 @@
 {
-  "name": "@pages-plugins/headers",
+  "name": "@cfpreview/pages-plugins-headers",
+  "version": "0.0.1",
   "main": "_worker.js",
   "files": [
-    "_worker.js"
+    "_worker.js",
+    "index.d.ts"
   ],
   "scripts": {
     "build": "npx wrangler pages functions build --plugin"

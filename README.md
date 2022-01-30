@@ -30,16 +30,17 @@ If you want to run it with wrangler2, run this:
 git clone git@github.com:GregBrimble/pages-plugins.git;
 cd pages-plugins;
 npm install;
-npm start
+npm start;
 ```
 
 ### Authoring a plugin
 
 Check out these examples:
 
-- [Sentry](./packages/sentry/src/_middleware.ts)
-- [Headers](./packages/headers/src/_middleware.ts)
-- [GraphQL](./packages/graphql/src/index.ts)
+- [Sentry](./packages/sentry)
+- [Headers](./packages/headers)
+- [GraphQL](./packages/graphql)
+- [[WIP] Google Chat](./packages/google-chat)
 
 ## Changes
 

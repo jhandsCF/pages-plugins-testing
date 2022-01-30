@@ -4,9 +4,7 @@ declare type PagesPlugin<
   Data extends Record<string, unknown> = Record<string, unknown>,
   PluginArgs = unknown
 > = {
-  default: (
-    pluginArgs: PluginArgs
-  ) => PagesPluginFunction<Env, Params, Data, PluginArgs>;
+  default: (pluginArgs: PluginArgs) => PagesFunction<Env, Params, Data>;
   name: string;
   assetsDirectory?: string;
 };

@@ -7,19 +7,17 @@ export const onRequest: PagesPluginFunction<
   {
     sentry: Toucan;
   },
-  Options
->[] = [
-  async (context) => {
-    context.data.sentry = new Toucan({
-      context,
-      ...context.pluginArgs,
-    });
+  Omit<Options, "context">
+> = async (context) => {
+  context.data.sentry = new Toucan({
+    context,
+    ...context.pluginArgs,
+  });
 
-    try {
-      return await context.next();
-    } catch (thrown) {
-      context.data.sentry.captureException(thrown);
-      throw thrown;
-    }
-  },
-];
+  try {
+    return await context.next();
+  } catch (thrown) {
+    context.data.sentry.captureException(thrown);
+    throw thrown;
+  }
+};

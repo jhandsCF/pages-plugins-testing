@@ -14,6 +14,6 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^3.3.1",
     "typescript": "^4.5.5",
-    "wrangler": "file:vendor/wrangler-0.0.0-2443b6b.tgz"
+    "wrangler": "file:../wrangler2/packages/wrangler"
   }
 }

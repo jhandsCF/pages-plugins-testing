@@ -1,10 +1,13 @@
 {
   "name": "@cfpreview/pages-plugins-google-chat",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "main": "_worker.js",
   "files": [
     "_worker.js",
     "index.d.ts",
+    "types.d.ts",
+    "tsconfig.json",
+    "functions/",
     "api/"
   ],
   "scripts": {

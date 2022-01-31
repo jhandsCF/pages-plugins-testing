@@ -1,10 +1,13 @@
 {
   "name": "@cfpreview/pages-plugins-sentry",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "_worker.js",
   "files": [
     "_worker.js",
-    "index.d.ts"
+    "index.d.ts",
+    "types.d.ts",
+    "tsconfig.json",
+    "functions/"
   ],
   "scripts": {
     "build": "npx wrangler pages functions build --plugin"

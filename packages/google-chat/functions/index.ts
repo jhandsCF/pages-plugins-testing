@@ -25,17 +25,17 @@ export const onRequestPost: PagesPluginFunction<
   any,
   Record<string, unknown>,
   (
-    message: chat_v1.Schema$Message
+    event: chat_v1.Schema$DeprecatedEvent
   ) => Promise<chat_v1.Schema$Message | undefined>
 > = async ({ request, pluginArgs }) => {
   if (!(await isAuthorized(request))) {
     return new Response(null, { status: 403 });
   }
 
-  const response = await pluginArgs(await request.json());
+  const message = await pluginArgs(await request.json());
 
-  if (response !== undefined) {
-    return new Response(JSON.stringify(response), {
+  if (message !== undefined) {
+    return new Response(JSON.stringify(message), {
       headers: { "Content-Type": "application/json" },
     });
   }

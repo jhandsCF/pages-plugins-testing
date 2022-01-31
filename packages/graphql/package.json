@@ -1,6 +1,6 @@
 {
   "name": "@cfpreview/pages-plugins-graphql",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "_worker.js",
   "directories": {
     "assets": "static"
@@ -8,6 +8,9 @@
   "files": [
     "_worker.js",
     "index.d.ts",
+    "types.d.ts",
+    "tsconfig.json",
+    "functions/",
     "static/"
   ],
   "scripts": {

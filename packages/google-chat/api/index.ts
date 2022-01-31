@@ -180,13 +180,13 @@ export class GoogleChatAPI {
           name: string;
         }
       | { space: string; message: string }
-  ): Promise<void> => {
+  ): Promise<{}> => {
     const url =
       "name" in args
         ? `https://chat.googleapis.com/v1/${args.name}`
         : `https://chat.googleapis.com/v1/spaces/${args.space}/messages/${args.message}`;
 
-    return this.api(url, { method: "DELETE" }); // TODO: Check response
+    return this.api(url, { method: "DELETE" });
   };
 
   getMessage = async (

@@ -1,13 +1,6 @@
-import Toucan from "toucan-js";
-import type * as Plugin from "./functions/_middleware";
+import type Toucan from "toucan-js";
+import type { PluginArgs } from "./types";
 
-type PagesFunctions = keyof typeof Plugin;
-type PluginArgs = Parameters<typeof Plugin[PagesFunctions]>[0]["pluginArgs"];
-
-export default function <
-  Env = unknown,
-  Params extends string = any,
-  Data extends Record<string, unknown> = Record<string, unknown>
->(args: PluginArgs): PagesFunction<Env, Params, Data & { sentry: Toucan }>;
-export const name: string;
-export const assetsDirectory: string;
+export default function (
+  args: PluginArgs
+): PagesFunction<unknown, any, { sentry: Toucan }>;

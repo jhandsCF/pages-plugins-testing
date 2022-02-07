@@ -1,9 +1,9 @@
-export const onRequest: PagesPluginFunction<
-  unknown,
-  any,
-  Record<string, unknown>,
-  HeadersInit
-> = async ({ next, pluginArgs }) => {
+import type { HeadersPagesPluginFunction } from "../types";
+
+export const onRequest: HeadersPagesPluginFunction = async ({
+  next,
+  pluginArgs,
+}) => {
   const headers = new Headers(pluginArgs);
 
   let response = await next();

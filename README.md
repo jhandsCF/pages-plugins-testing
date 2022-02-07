@@ -40,7 +40,7 @@ Check out these examples:
 - [Sentry](./packages/sentry)
 - [Headers](./packages/headers)
 - [GraphQL](./packages/graphql)
-- [[WIP] Google Chat](./packages/google-chat)
+- [Google Chat](./packages/google-chat)
 
 ## Changes
 

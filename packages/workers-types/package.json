@@ -1,0 +1,4 @@
+{
+  "name": "@cloudflare/workers-types",
+  "types": "index.d.ts"
+}

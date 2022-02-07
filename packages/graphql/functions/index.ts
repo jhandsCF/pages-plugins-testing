@@ -1,4 +1,4 @@
-import { graphql, GraphQLSchema } from "graphql";
+import type { GraphQLPagesPluginFunction } from "../types";
 
 const extractGraphQLQueryFromRequest = async (request: Request) => {
   if (/application\/graphql/i.test(request.headers.get("Content-Type"))) {
@@ -14,13 +14,11 @@ const extractGraphQLQueryFromRequest = async (request: Request) => {
   };
 };
 
-export const onRequestPost: PagesPluginFunction<
-  unknown,
-  any,
-  Record<string, unknown>,
-  { schema: GraphQLSchema }
-> = async ({ request, pluginArgs }) => {
-  const { schema } = pluginArgs;
+export const onRequestPost: GraphQLPagesPluginFunction = async ({
+  request,
+  pluginArgs,
+}) => {
+  const { schema, graphql } = pluginArgs;
 
   const result = await graphql({
     schema,

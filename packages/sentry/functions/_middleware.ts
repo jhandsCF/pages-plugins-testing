@@ -1,14 +1,7 @@
 import Toucan from "toucan-js";
-import type { Options } from "toucan-js/dist/types";
+import type { SentryPagesPluginFunction } from "../types";
 
-export const onRequest: PagesPluginFunction<
-  unknown,
-  any,
-  {
-    sentry: Toucan;
-  },
-  Omit<Options, "context">
-> = async (context) => {
+export const onRequest: SentryPagesPluginFunction = async (context) => {
   context.data.sentry = new Toucan({
     context,
     ...context.pluginArgs,

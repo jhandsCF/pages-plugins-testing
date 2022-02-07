@@ -1,9 +1,10 @@
 {
   "name": "@cfpreview/pages-plugins-google-chat",
   "version": "0.1.1",
-  "main": "_worker.js",
+  "main": "index.js",
+  "types": "index.d.ts",
   "files": [
-    "_worker.js",
+    "index.js",
     "index.d.ts",
     "types.d.ts",
     "tsconfig.json",
@@ -11,7 +12,7 @@
     "api/"
   ],
   "scripts": {
-    "build": "npx wrangler pages functions build --plugin"
+    "build": "npx wrangler pages functions build --plugin --script-path index.js"
   },
   "devDependencies": {
     "@googleapis/chat": "^3.2.0",

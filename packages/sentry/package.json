@@ -1,16 +1,17 @@
 {
   "name": "@cfpreview/pages-plugins-sentry",
   "version": "0.1.0",
-  "main": "_worker.js",
+  "main": "index.js",
+  "types": "index.d.ts",
   "files": [
-    "_worker.js",
+    "index.js",
     "index.d.ts",
     "types.d.ts",
     "tsconfig.json",
     "functions/"
   ],
   "scripts": {
-    "build": "npx wrangler pages functions build --plugin"
+    "build": "npx wrangler pages functions build --plugin --script-path index.js"
   },
   "dependencies": {
     "toucan-js": "^2.5.0"

@@ -1,5 +1,5 @@
 import { KJUR } from "jsrsasign";
-import type { chat_v1 } from "@googleapis/chat";
+import type { GoogleChatPagesPluginFunction } from "../types";
 
 const extractJWTFromRequest = (request: Request) => {
   return request.headers.get("Authorization").split("Bearer ")[1];
@@ -20,14 +20,10 @@ const isAuthorized = async (request: Request) => {
   return KJUR.jws.JWS.verifyJWT(jwt, cert, { alg: ["RS256"] });
 };
 
-export const onRequestPost: PagesPluginFunction<
-  unknown,
-  any,
-  Record<string, unknown>,
-  (
-    event: chat_v1.Schema$DeprecatedEvent
-  ) => Promise<chat_v1.Schema$Message | undefined>
-> = async ({ request, pluginArgs }) => {
+export const onRequestPost: GoogleChatPagesPluginFunction = async ({
+  request,
+  pluginArgs,
+}) => {
   if (!(await isAuthorized(request))) {
     return new Response(null, { status: 403 });
   }

@@ -1,12 +1,13 @@
 {
   "name": "@cfpreview/pages-plugins-graphql",
   "version": "0.1.0",
-  "main": "_worker.js",
+  "main": "index.js",
+  "types": "index.d.ts",
   "directories": {
     "assets": "static"
   },
   "files": [
-    "_worker.js",
+    "index.js",
     "index.d.ts",
     "types.d.ts",
     "tsconfig.json",
@@ -14,9 +15,9 @@
     "static/"
   ],
   "scripts": {
-    "build": "npx wrangler pages functions build --plugin"
+    "build": "npx wrangler pages functions build --plugin --script-path index.js"
   },
-  "peerDependencies": {
+  "devDependencies": {
     "graphql": "^16.2.0"
   }
 }

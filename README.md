@@ -1,5 +1,5 @@
 # Pages Plugins
-1
+2
 ## Features
 
 - 🥞 **Completely composable**
